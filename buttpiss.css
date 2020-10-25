@@ -1,0 +1,270 @@
+<style>
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* portrait mode warning */
+#warning-message { display: none;
+background-color: black;
+color:white;
+font-size:30px;
+}
+
+
+/* query screen size and display either portrait warning or full menu content */
+
+@media only screen and (orientation:portrait){
+.outer { display:none; }
+#warning-message { display:block; }
+
+ }
+
+@media only screen and (orientation:landscape){
+        #warning-message { display:none; }
+
+    }
+
+
+
+
+html {
+    width: 100%;
+    height: 100%;
+    }
+
+
+
+    body {
+        /* path to custom cursor */
+        cursor: url('images/cursor.cur'), default;
+
+
+    }
+
+
+.outer {
+    background: url('images/ymca.png') fixed;
+    background-size: cover;
+    background-position: left;
+    background-repeat: repeat;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black
+}
+
+.container {
+    background: url('') fixed;
+    position: relative;
+    width: 55%;
+    left: 20%;
+    background-color: ;
+}
+
+/* header image properties */
+.masthead img {
+    /* image will scale to width of container & maintain aspect ratio */
+    width: 100%;
+}
+
+/*https://www.w3schools.com/howto/howto_css_image_text.asp*/
+/* Container holding the image and the text */
+    .button-container {
+      position: relative;
+      width: 55%;
+      left: 0%;
+      font-size: 130%;
+      font-family: 'Trispace', sans-serif;
+      color: red;
+      text-align: center;
+      text-shadow: 2px 1px black;
+
+      }
+
+    /* Bottom left text */
+    .bottom-left {
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
+      color: red;
+      }
+
+    /* Top left text */
+    .top-left {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+      color: red;
+      }
+
+    /* Top right text */
+    .top-right {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+      color: red;
+      }
+
+    /* Bottom right text */
+    .bottom-right {
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
+      color: red;
+      }
+
+      /* Centered text */
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-family: 'Trispace', sans-serif;
+      transform: translate(-50%, -50%);
+      color: yellow;
+      }
+
+    a{
+      color: white;
+      }
+
+    a:visited {
+      color: rgba(40, 40, 61, 0.87);
+      }
+
+/* links to patreon, homepage etc. */
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 3%;
+    width: 66%;
+    left: 17%;
+    margin-top: 20%;
+    font-family: 'Trispace', sans-serif;
+    text-align: center;
+    color: black;
+    text-shadow: 2px 2px yellow;
+}
+
+
+    .contact-item {
+        padding: 1%;
+        margin: 1%;
+        border: 3px ridge magenta;
+        width: 24%;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        background: url('images/f1.gif') fixed;
+    }
+
+     .contact-item:hover {
+            text-decoration: cyan wavy underline;
+            text-shadow: 1px 1px magenta;
+            background: rgba(255,255,255,1);
+
+
+        }
+
+
+/* style for menu container */
+
+#playlist-frame {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 25vh;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    max-width: 100%;
+    left: 0;
+    height: 1400px;
+    /* what font should the titles be? */
+    font-family: 'Trispace', sans-serif;
+    text-align: center;
+}
+
+    .plays >* {
+        flex: 1 0 25%;
+    }
+
+    .item {
+        padding: 1.5%;
+        min-height: 3rem;
+        align-self: center;
+        align-content: center;
+        border: 3px ridge white;
+        min-width: 25%;
+        max-width: 25%;
+        color: grey;
+        text-decoration: none;
+        background: rgba(255,255,255,0.3);
+    }
+
+
+     /* link style after visited */
+        .item:visited {
+            color: #4c4441;
+            background: rgba(0,0,0,1);
+        }
+
+        /* link style on mouse hover */
+        .item:hover {
+            text-decoration: black wavy underline;
+            text-shadow: 1px 1px cyan;
+            background: rgba(255,255,255,0.5);
+        }
+
+
+
+
+/* intro video sizing & positioning */
+
+.intro-vid {
+    position: relative;
+    width: 95%;
+    left: 2.5%;
+    padding-bottom: 45px;
+}
+
+
+/* fire footer */
+
+.footer {
+    position: fixed;
+    width: 100%;
+    height: 12%;
+    bottom: 0;
+    /* with whatever you want to stick at the bottom */
+    background: url('');
+}
+/* youtube */
+
+.youtube-responsive-container {
+position:relative;
+padding-bottom:56.25%;
+padding-top:30px;
+height:0;
+/* overflow:hidden;  i feel like this is why the bottom player controls get cut off*/
+}
+
+.youtube-responsive-container iframe,
+.youtube-responsive-container object,
+.youtube-responsive-container embed {
+position:absolute;
+width:100%;
+height:100%;
+}
+
+</style>
